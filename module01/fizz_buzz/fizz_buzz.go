@@ -18,13 +18,14 @@ func FizzBuzz(n int) {
     i:= 1
     for i <= n {
 
-        if i % 3 == 0 && i % 5 == 0 {
+        switch {
+        case i % 3 == 0 && i % 5 == 0:
             fmt.Print("Fizz Buzz")
-        } else if i % 3 == 0 {
+        case  i % 3 == 0:
             fmt.Print("Fizz")
-        } else if i % 5 == 0 {
+        case i % 5 == 0:
             fmt.Print("Buzz")
-        } else {
+        default:
             fmt.Print(i)
         }
 
